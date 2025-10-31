@@ -36,7 +36,7 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
 -   Add your API Keys
 -   Add your AWS Credentials
 -   Add your S3 Bucket name
--   Configure your POSTGRESS database
+-   Configure your POSTGRES database
 
 2. Ensure the `config.yml` file is present in the project root. This file configures the available models for LiteLLM. Feel free to add more models here!
 
