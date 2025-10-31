@@ -42,15 +42,20 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
 
 ## Usage
 
-1. Start the services:
+1. Create the data folder:
+    ```bash
+    mkdir -pv data/{openwebui,postgres}
+    ```
+
+2. Start the services:
 
     ```bash
     podman compose --env-file .env up -d
     ```
 
-2. Access the Open WebUI interface at `http://localhost:3000`
+3. Access the Open WebUI interface at `http://localhost:3000`
    
-3. Access LiteLLM OpenAPI page at `http://localhost:4000`
+4. Access LiteLLM OpenAPI page at `http://localhost:4000`
 
 ## Services
 
