@@ -33,21 +33,14 @@ model_list:
 
   - model_name: bedrock-claude-4-5-haiku
     litellm_params:
-      model: bedrock/anthropic.claude-haiku-4-5-20251001-v1:0
+      model: bedrock/global.anthropic.claude-haiku-4-5-20251001-v1:0
       aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
       aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
       aws_region_name: os.environ/AWS_REGION_NAME
 
-  - model_name: bedrock-claude-4-1-opus
+  - model_name: bedrock-claude-4-5-opus
     litellm_params:
-      model: bedrock/anthropic.claude-opus-4-1-20250805-v1:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-deepseek-r1
-    litellm_params:
-      model: bedrock/us.deepseek.r1-v1:0
+      model: bedrock/global.anthropic.claude-opus-4-5-20251101-v1:0
       aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
       aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
       aws_region_name: os.environ/AWS_REGION_NAME
