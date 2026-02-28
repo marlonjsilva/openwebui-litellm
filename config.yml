@@ -5,12 +5,6 @@ model_list:
       model: deepseek/deepseek-reasoner
       api_key: os.environ/DEEPSEEK_API_KEY
 
-  - model_name: cc-deepseek-reasoner
-    litellm_params:
-      api_base: https://api.deepseek.com/anthropic
-      model: anthropic/deepseek-reasoner
-      api_key: os.environ/DEEPSEEK_API_KEY
-
   - model_name: deepseek-chat
     litellm_params:
       model: deepseek/deepseek-chat
@@ -19,6 +13,20 @@ model_list:
   - model_name: bedrock-deepseek-v3.2
     litellm_params:
       model: bedrock/deepseek.v3.2
+      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+      aws_region_name: os.environ/AWS_REGION_NAME
+
+  - model_name: bedrock-zai.glm-4.7
+    litellm_params:
+      model: bedrock/zai.glm-4.7
+      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+      aws_region_name: os.environ/AWS_REGION_NAME
+
+  - model_name: bedrock-zai.glm-4.7-flash
+    litellm_params:
+      model: bedrock/zai.glm-4.7-flash
       aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
       aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
       aws_region_name: os.environ/AWS_REGION_NAME
