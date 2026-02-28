@@ -1,14 +1,21 @@
+---
 model_list:
-  - model_name: deepseek-coder
+  - model_name: deepseek-reasoner
     litellm_params:
-      model: deepseek/deepseek-coder
+      model: deepseek/deepseek-reasoner
+      api_key: os.environ/DEEPSEEK_API_KEY
+
+  - model_name: cc-deepseek-reasoner
+    litellm_params:
+      api_base: https://api.deepseek.com/anthropic
+      model: anthropic/deepseek-reasoner
       api_key: os.environ/DEEPSEEK_API_KEY
 
   - model_name: deepseek-chat
     litellm_params:
       model: deepseek/deepseek-chat
       api_key: os.environ/DEEPSEEK_API_KEY
-  
+
   - model_name: gpt-4.1
     litellm_params:
       model: gpt-4.1
@@ -24,7 +31,35 @@ model_list:
       model: gpt-4o-mini
       api_key: os.environ/OPENAI_API_KEY
 
-  - model_name: bedrock-claude-4-5-sonnet
+  - model_name: bedrock-deepseek-v3.2
+    litellm_params:
+      model: bedrock/deepseek.v3.2
+      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+      aws_region_name: os.environ/AWS_REGION_NAME
+
+  - model_name: bedrock-qwen3-235b-a22b
+    litellm_params:
+      model: bedrock/qwen.qwen3-vl-235b-a22b
+      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+      aws_region_name: os.environ/AWS_REGION_NAME
+
+  - model_name: bedrock-qwen3-coder-480b-a35b
+    litellm_params:
+      model: bedrock/qwen.qwen3-coder-480b-a35b-v1:0
+      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+      aws_region_name: os.environ/AWS_REGION_NAME
+
+  - model_name: bedrock-qwen3-32b
+    litellm_params:
+      model: bedrock/qwen.qwen3-32b-v1:0
+      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+      aws_region_name: os.environ/AWS_REGION_NAME
+
+  - model_name: bedrock-claude-4-6-sonnet
     litellm_params:
       model: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
       aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
@@ -38,9 +73,9 @@ model_list:
       aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
       aws_region_name: os.environ/AWS_REGION_NAME
 
-  - model_name: bedrock-claude-4-5-opus
+  - model_name: bedrock-claude-4-6-opus
     litellm_params:
-      model: bedrock/global.anthropic.claude-opus-4-5-20251101-v1:0
+      model: bedrock/anthropic.claude-opus-4-6-v1
       aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
       aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
       aws_region_name: os.environ/AWS_REGION_NAME
@@ -76,6 +111,20 @@ model_list:
   - model_name: bedrock-llama-3-3-70b
     litellm_params:
       model: bedrock/us.meta.llama3-3-70b-instruct-v1:0
+      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+      aws_region_name: os.environ/AWS_REGION_NAME
+
+  - model_name: bedrock-minimax-m2.1
+    litellm_params:
+      model: bedrock/minimax.minimax-m2.1
+      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+      aws_region_name: os.environ/AWS_REGION_NAME
+
+  - model_name: bedrock-kimi-k2.5
+    litellm_params:
+      model: bedrock/moonshotai.kimi-k2.5
       aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
       aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
       aws_region_name: os.environ/AWS_REGION_NAME
@@ -153,7 +202,9 @@ litellm_settings:
   success_callback: ["s3_v2"]
   failure_callback: ["s3_v2"]
   s3_callback_params:
-    s3_bucket_name: os.environ/AWS_S3_BUCKET_NAME   # AWS Bucket Name for S3
-    s3_region_name: os.environ/AWS_REGION_NAME            # AWS Region Name for S3
+    s3_bucket_name: os.environ/AWS_S3_BUCKET_NAME  # AWS Bucket Name for S3
+    s3_region_name: os.environ/AWS_REGION_NAME  # AWS Region Name for S3
+    # yamllint disable-line rule:line-length
     s3_aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID  # us os.environ/<variable name> to pass environment variables. This is AWS Access Key ID for S3
+    # yamllint disable-line rule:line-length
     s3_aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY  # AWS Secret Access Key for S3
