@@ -1,3 +1,4 @@
+---
 name: OpenWebUI - LiteLLM
 version: '3.8'
 services:
@@ -7,7 +8,8 @@ services:
         ports:
             - "3000:8080"
         volumes:
-            - ./data/openwebui:/app/backend/data:Z # Remove :Z if you are not using SELinux
+            # yamllint disable-line rule:line-length
+            - ./data/openwebui:/app/backend/data:Z  # Remove :Z if you are not using SELinux
         extra_hosts:
             - "host.docker.internal:host-gateway"
         environment:
@@ -17,17 +19,19 @@ services:
         restart: always
 
     litellm:
-        image: ghcr.io/berriai/litellm-database:main-latest
+        image: docker.io/litellm/litellm-database:v1.81.12-stable.2
         container_name: litellm
         env_file:
             - .env
         ports:
             - "4000:4000"
         volumes:
-            - ./config.yml:/app/config.yaml:Z # Remove :Z if you are not using SELinux
+            # yamllint disable-line rule:line-length
+            - ./config.yml:/app/config.yaml:Z  # Remove :Z if you are not using SELinux
         command: --config /app/config.yaml --port 4000
         restart: always
         environment:
+            # yamllint disable-line rule:line-length
             DATABASE_URL: "postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}"
             STORE_MODEL_IN_DB: "True"
 
@@ -35,12 +39,14 @@ services:
         image: postgres
         restart: always
         volumes:
-            - ./data/postgres:/var/lib/postgresql/data:Z # Remove :Z if you are not using SELinux
+            # yamllint disable-line rule:line-length
+            - ./data/postgres:/var/lib/postgresql:Z  # Remove :Z if you are not using SELinux
         environment:
             POSTGRES_DB: ${POSTGRES_DB}
             POSTGRES_USER: ${POSTGRES_USER}
             POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
         healthcheck:
+            # yamllint disable-line rule:line-length
             test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
             interval: 1s
             timeout: 5s
