@@ -179,7 +179,6 @@ model_list:
 
 general_settings:
   master_key: os.environ/MASTER_KEY
-  database_url: "postgresql://llmproxy:dbpassword9090@db:5432/litellm"
   store_prompts_in_spend_logs: true
 
 litellm_settings:

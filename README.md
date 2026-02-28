@@ -30,6 +30,7 @@ This project sets up an Open WebUI interface with LiteLLM as a backend proxy for
     POSTGRES_USER=''
     POSTGRES_PASSWORD=''
     POSTGRES_DB=''
+    DATABASE_URL="postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}"
     ```
 
 -   Add your master key for LiteLLM
