@@ -1,167 +1,203 @@
----
 model_list:
-  - model_name: deepseek-reasoner
-    litellm_params:
-      model: deepseek/deepseek-reasoner
-      api_key: os.environ/DEEPSEEK_API_KEY
-
-  - model_name: deepseek-chat
-    litellm_params:
-      model: deepseek/deepseek-chat
-      api_key: os.environ/DEEPSEEK_API_KEY
-
-  - model_name: bedrock-deepseek-v3.2
-    litellm_params:
-      model: bedrock/deepseek.v3.2
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-zai.glm-4.7
-    litellm_params:
-      model: bedrock/zai.glm-4.7
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-zai.glm-4.7-flash
-    litellm_params:
-      model: bedrock/zai.glm-4.7-flash
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-qwen3-235b-a22b
-    litellm_params:
-      model: bedrock/qwen.qwen3-vl-235b-a22b
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-qwen3-coder-480b-a35b
-    litellm_params:
-      model: bedrock/qwen.qwen3-coder-480b-a35b-v1:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-qwen3-32b
-    litellm_params:
-      model: bedrock/qwen.qwen3-32b-v1:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-claude-4-6-sonnet
-    litellm_params:
-      model: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-claude-4-5-haiku
-    litellm_params:
-      model: bedrock/global.anthropic.claude-haiku-4-5-20251001-v1:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-claude-4-6-opus
-    litellm_params:
-      model: bedrock/anthropic.claude-opus-4-6-v1
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-deepseek-v3.1
-    litellm_params:
-      model: bedrock/deepseek.v3-v1:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-minimax-m2.1
-    litellm_params:
-      model: bedrock/minimax.minimax-m2.1
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-kimi-k2.5
-    litellm_params:
-      model: bedrock/moonshotai.kimi-k2.5
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-nova-micro
-    litellm_params:
-      model: bedrock/us.amazon.nova-micro-v1:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-nova-pro
-    litellm_params:
-      model: bedrock/us.amazon.nova-pro-v1:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-palmyra-x4
-    litellm_params:
-      model: bedrock/us.writer.palmyra-x4-v1:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: bedrock-palmyra-x5
-    litellm_params:
-      model: bedrock/us.writer.palmyra-x5-v1:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: titan-embed-v1
-    litellm_params:
-      model: bedrock/amazon.titan-embed-text-v1
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: titan-embed-v2
-    litellm_params:
-      model: bedrock/amazon.titan-embed-text-v2:0
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: cohere-embed-us
-    litellm_params:
-      model: bedrock/cohere.embed-english-v3
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
-  - model_name: cohere-embed-multi
-    litellm_params:
-      model: bedrock/cohere.embed-multilingual-v3
-      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
-      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
-      aws_region_name: os.environ/AWS_REGION_NAME
-
+- model_name: deepseek-reasoner
+  litellm_params:
+    model: deepseek/deepseek-reasoner
+    api_key: os.environ/DEEPSEEK_API_KEY
+- model_name: deepseek-chat
+  litellm_params:
+    model: deepseek/deepseek-chat
+    api_key: os.environ/DEEPSEEK_API_KEY
+- model_name: bedrock-deepseek-v3.2
+  litellm_params:
+    model: bedrock/deepseek.v3.2
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-zai.glm-4.7
+  litellm_params:
+    model: bedrock/zai.glm-4.7
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-zai.glm-4.7-flash
+  litellm_params:
+    model: bedrock/zai.glm-4.7-flash
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-qwen3-235b-a22b
+  litellm_params:
+    model: bedrock/qwen.qwen3-vl-235b-a22b
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-qwen3-coder-480b-a35b
+  litellm_params:
+    model: bedrock/qwen.qwen3-coder-480b-a35b-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-qwen3-32b
+  litellm_params:
+    model: bedrock/qwen.qwen3-32b-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-claude-4-6-sonnet
+  litellm_params:
+    model: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-claude-4-5-haiku
+  litellm_params:
+    model: bedrock/global.anthropic.claude-haiku-4-5-20251001-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-claude-4-6-opus
+  litellm_params:
+    model: bedrock/anthropic.claude-opus-4-6-v1
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-deepseek-v3.1
+  litellm_params:
+    model: bedrock/deepseek.v3-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-minimax-m2.1
+  litellm_params:
+    model: bedrock/minimax.minimax-m2.1
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-kimi-k2.5
+  litellm_params:
+    model: bedrock/moonshotai.kimi-k2.5
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-nova-micro
+  litellm_params:
+    model: bedrock/us.amazon.nova-micro-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-nova-pro
+  litellm_params:
+    model: bedrock/us.amazon.nova-pro-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-palmyra-x4
+  litellm_params:
+    model: bedrock/us.writer.palmyra-x4-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-palmyra-x5
+  litellm_params:
+    model: bedrock/us.writer.palmyra-x5-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: titan-embed-v1
+  litellm_params:
+    model: bedrock/amazon.titan-embed-text-v1
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: titan-embed-v2
+  litellm_params:
+    model: bedrock/amazon.titan-embed-text-v2:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: cohere-embed-us
+  litellm_params:
+    model: bedrock/cohere.embed-english-v3
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: cohere-embed-multi
+  litellm_params:
+    model: bedrock/cohere.embed-multilingual-v3
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-voxtral-mini-3b-2507
+  litellm_params:
+    model: bedrock/mistral.voxtral-mini-3b-2507
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-gemma-3-4b-it
+  litellm_params:
+    model: bedrock/google.gemma-3-4b-it
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-google-gemma-3-12b
+  litellm_params:
+    model: bedrock/google.gemma-3-12b-it
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-nova-micro
+  litellm_params:
+    model: bedrock/amazon.nova-micro-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-llama-3-2-1b-instruct
+  litellm_params:
+    model: bedrock/meta.llama3-2-1b-instruct-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-mistral-7b-instruct-v0-3
+  litellm_params:
+    model: bedrock/mistral.mistral-7b-instruct-v0:3
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-gpt-oss-safeguard-20b
+  litellm_params:
+    model: bedrock/openai.gpt-oss-safeguard-20b
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-nvidia-nemotron-nano-9b-v2
+  litellm_params:
+    model: bedrock/nvidia.nemotron-nano-9b-v2
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-ministral-3-8b
+  litellm_params:
+    model: bedrock/mistral.ministral-3-8b-instruct
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
+- model_name: bedrock-nova-lite
+  litellm_params:
+    model: bedrock/amazon.nova-lite-v1:0
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
 general_settings:
   master_key: os.environ/MASTER_KEY
   store_prompts_in_spend_logs: true
-
 litellm_settings:
   drop_params: true
-  success_callback: ["s3_v2"]
-  failure_callback: ["s3_v2"]
+  success_callback:
+  - s3_v2
+  failure_callback:
+  - s3_v2
   s3_callback_params:
-    s3_bucket_name: os.environ/AWS_S3_BUCKET_NAME  # AWS Bucket Name for S3
-    s3_region_name: os.environ/AWS_REGION_NAME  # AWS Region Name for S3
-    # yamllint disable-line rule:line-length
-    s3_aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID  # us os.environ/<variable name> to pass environment variables. This is AWS Access Key ID for S3
-    # yamllint disable-line rule:line-length
-    s3_aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY  # AWS Secret Access Key for S3
+    s3_bucket_name: os.environ/AWS_S3_BUCKET_NAME
+    s3_region_name: os.environ/AWS_REGION_NAME
+    s3_aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    s3_aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
