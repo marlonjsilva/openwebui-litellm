@@ -68,6 +68,12 @@ model_list:
     aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
     aws_region_name: os.environ/AWS_REGION_NAME
     reasoning_effort: "low"
+- model_name: bedrock-minimax-m2.5
+  litellm_params:
+    model: bedrock/minimax.minimax-m2.5
+    aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+    aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+    aws_region_name: os.environ/AWS_REGION_NAME
 - model_name: bedrock-minimax-m2.1
   litellm_params:
     model: bedrock/minimax.minimax-m2.1
