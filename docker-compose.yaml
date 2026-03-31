@@ -19,7 +19,7 @@ services:
         restart: always
 
     litellm:
-        image: docker.io/litellm/litellm-database:v1.81.12-stable.2
+        image: docker.io/litellm/litellm-database:v1.82.3-stable.patch.2
         container_name: litellm
         env_file:
             - .env

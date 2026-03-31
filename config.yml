@@ -67,6 +67,7 @@ model_list:
     aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
     aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
     aws_region_name: os.environ/AWS_REGION_NAME
+    reasoning_effort: "low"
 - model_name: bedrock-minimax-m2.1
   litellm_params:
     model: bedrock/minimax.minimax-m2.1
@@ -187,6 +188,7 @@ model_list:
     aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
     aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
     aws_region_name: os.environ/AWS_REGION_NAME
+
 general_settings:
   master_key: os.environ/MASTER_KEY
   store_prompts_in_spend_logs: true
